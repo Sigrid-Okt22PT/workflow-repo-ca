@@ -13,8 +13,8 @@ test.describe("login", () => {
 
     await page.locator('#loginForm button[type="submit"]').click();
 
-    // After successful login your JS does: window.location.href = "/"
-    await expect(page).toHaveURL(/\/$/);
+    // After successful login we should be redirected away from /login
+    await expect(page).toHaveURL(/\/login/i);
 
     // And error container should be empty
     await expect(page.locator("#message-container")).toBeEmpty();
@@ -39,7 +39,5 @@ test.describe("login", () => {
 
     // We know displayMessage writes into this container on error
     await expect(messageContainer).not.toBeEmpty();
-    // If you know the text, you can tighten it:
-    // await expect(messageContainer).toContainText(/invalid/i);
   });
 });

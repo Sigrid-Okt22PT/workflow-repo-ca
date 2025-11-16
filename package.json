@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
+    "test:e2e": "playwright test",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
-    "prepare": "husky install"
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -33,10 +33,5 @@
     "*.html": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

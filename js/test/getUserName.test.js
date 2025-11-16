@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { getUsername } from "../utils/storage.js";
 
-describe("getUserName", () => {
+describe("getUsername", () => {
   beforeEach(() => {
     localStorage.clear();
   });
