@@ -18,8 +18,6 @@ of the development process.
 - Pre-commit automation  
 - Unit testing with Vitest  
 - E2E testing with Playwright  
-- Environment variable handling  
-- Clean documentation and project structure  
 
 All work is completed in the `workflow` branch, as required by the CA.
 
@@ -31,14 +29,12 @@ All work is completed in the `workflow` branch, as required by the CA.
 - [Built With](#-built-with)  
 - [Features Implemented](#-features-implemented)  
 - [Setup & Installation](#-setup--installation)  
-- [Branching Strategy](#-branching-strategy)  
 - [Environment Variables](#-environment-variables)  
 - [ESLint & Prettier Setup](#-eslint--prettier-setup)  
 - [Vitest (Unit Tests)](#-vitest-unit-tests)  
 - [Playwright (End-to-End Tests)](#-playwright-end-to-end-tests)  
 - [Development Scripts](#-development-scripts)  
-- [Submitting the Assignment](#-submitting-the-assignment)  
-- [License](#-license)
+
 
 ---
 
@@ -49,7 +45,6 @@ All work is completed in the `workflow` branch, as required by the CA.
 - **TailwindCSS** (optional development styling)  
 - **ESLint** for code quality  
 - **Prettier** for code formatting  
-- **Husky** for pre-commit hooks  
 - **Vitest** for unit tests  
 - **Playwright** for end-to-end tests  
 - **Node.js + npm** for tooling  
@@ -137,9 +132,6 @@ npm run lint
 npm run format
 ```
 
-Husky ensures staged JS/HTML files are linted and formatted before
-committing.
-
 ## 🧪 Vitest Unit Tests
 
 Run unit tests:
@@ -179,6 +171,7 @@ npx playwright show-report
   "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
   "lint": "eslint .",
   "test": "vitest",
+  "test:e2e": "playwrite",
   "format": "prettier --write ."
 }
 ```
