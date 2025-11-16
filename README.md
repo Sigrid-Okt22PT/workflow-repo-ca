@@ -149,6 +149,11 @@ Unit tests are stored in:
 Run all E2E tests:
 
 ``` bash
+npm run test:e2e
+```
+or
+
+``` bash
 npx playwright test
 ```
 
@@ -171,7 +176,7 @@ npx playwright show-report
   "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
   "lint": "eslint .",
   "test": "vitest",
-  "test:e2e": "playwrite",
+  "test:e2e": "playwrite test",
   "format": "prettier --write ."
 }
 ```
