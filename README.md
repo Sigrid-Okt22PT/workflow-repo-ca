@@ -1,4 +1,5 @@
-# Workflow CA – Testing, Tooling & Branching  
+# Workflow CA – Testing, Tooling & Branching
+
 A coursework repository demonstrating **Git workflow**, **ESLint**, **Prettier**, **Husky commit hooks**, **Vitest unit testing**, and **Playwright end-to-end testing**.
 
 This project follows the required setup from the Noroff **Workflow Module**, including branching strategy, environment variables, testing tools, and documentation of project scripts.
@@ -8,16 +9,16 @@ This project follows the required setup from the Noroff **Workflow Module**, inc
 ## 📘 Description
 
 This repository contains the solution for the **Workflow Course Assignment (CA)**.  
-The objective of this assignment is to apply the skills and knowledge gained during 
-the workflow course to enhance the quality of a website. 
-You will do this by configuring tools and defining tests that improve the efficiency 
+The objective of this assignment is to apply the skills and knowledge gained during
+the workflow course to enhance the quality of a website.
+You will do this by configuring tools and defining tests that improve the efficiency
 of the development process.
 
-- Git forking and branching  
-- Linting and formatting  
-- Pre-commit automation  
-- Unit testing with Vitest  
-- E2E testing with Playwright  
+- Git forking and branching
+- Linting and formatting
+- Pre-commit automation
+- Unit testing with Vitest
+- E2E testing with Playwright
 
 All work is completed in the `workflow` branch, as required by the CA.
 
@@ -25,83 +26,91 @@ All work is completed in the `workflow` branch, as required by the CA.
 
 ## 📑 Table of Contents
 
-- [Description](#-description)  
-- [Built With](#-built-with)  
-- [Features Implemented](#-features-implemented)  
-- [Setup & Installation](#-setup--installation)  
-- [Environment Variables](#-environment-variables)  
-- [ESLint & Prettier Setup](#-eslint--prettier-setup)  
-- [Vitest (Unit Tests)](#-vitest-unit-tests)  
-- [Playwright (End-to-End Tests)](#-playwright-end-to-end-tests)  
-- [Development Scripts](#-development-scripts)  
-
+- [Description](#-description)
+- [Built With](#-built-with)
+- [Features Implemented](#-features-implemented)
+- [Setup & Installation](#-setup--installation)
+- [Environment Variables](#-environment-variables)
+- [ESLint & Prettier Setup](#-eslint--prettier-setup)
+- [Vitest (Unit Tests)](#-vitest-unit-tests)
+- [Playwright (End-to-End Tests)](#-playwright-end-to-end-tests)
+- [Development Scripts](#-development-scripts)
 
 ---
 
 ## 🔧 Built With
 
-- **JavaScript (ES Modules)**  
-- **HTML**  
-- **TailwindCSS** (optional development styling)  
-- **ESLint** for code quality  
-- **Prettier** for code formatting  
-- **Vitest** for unit tests  
-- **Playwright** for end-to-end tests  
-- **Node.js + npm** for tooling  
-- **dotenv** for environment variable handling  
+- **JavaScript (ES Modules)**
+- **HTML**
+- **TailwindCSS** (optional development styling)
+- **ESLint** for code quality
+- **Prettier** for code formatting
+- **Vitest** for unit tests
+- **Playwright** for end-to-end tests
+- **Node.js + npm** for tooling
+- **dotenv** for environment variable handling
 
 ---
 
 ## ✨ Features Implemented
 
 ### ✔ Code Quality & Tooling
-- ESLint configured for browser environment  
-- Prettier formatting applied project-wide  
-- Husky pre-commit hook that:  
-  - Lints staged JS files  
-  - Formats staged HTML and JS files  
+
+- ESLint configured for browser environment
+- Prettier formatting applied project-wide
+- Husky pre-commit hook that:
+  - Lints staged JS files
+  - Formats staged HTML and JS files
 
 ### ✔ Unit Tests (Vitest)
 
 #### `isActivePath`
+
 Tests required by the CA:
-- True when paths match exactly  
-- True for `/` and `/index.html`  
-- True when current path includes the href  
-- False when paths don’t match  
+
+- True when paths match exactly
+- True for `/` and `/index.html`
+- True when current path includes the href
+- False when paths don’t match
 
 #### `getUsername`
-- Returns the stored user’s name  
-- Returns `null` if no user exists  
+
+- Returns the stored user’s name
+- Returns `null` if no user exists
 
 ### ✔ End-to-End Tests (Playwright)
 
 #### `login` test suite:
-- User can log in using credentials from `.env`  
-- Error message appears for invalid credentials  
+
+- User can log in using credentials from `.env`
+- Error message appears for invalid credentials
 
 #### `navigation` test suite:
-- Navigates to home page  
-- Waits for venue list  
-- Opens first venue  
-- Confirms “Venue details” in heading  
+
+- Navigates to home page
+- Waits for venue list
+- Opens first venue
+- Confirms “Venue details” in heading
 
 ---
 
 ## 🚀 Setup & Installation
 
-### 1. Clone Your Fork  
+### 1. Clone Your Fork
+
 ```bash
 git clone https://github.com/<your-username>/<your-fork>.git
 cd workflow-repo-ca
 ```
 
 ### 2. Switch to the workflow branch
+
 ```bash
 git checkout workflow
 ```
 
 ### 3. Install dependencies
+
 ```bash
 npm install
 ```
@@ -110,7 +119,7 @@ npm install
 
 Create a `.env` file:
 
-``` env
+```env
 E2E_BASE_URL=http://localhost:3000
 E2E_USER_EMAIL=user@example.com
 E2E_USER_PASSWORD=ExamplePassword123
@@ -122,13 +131,13 @@ The `.env.example` contains empty placeholders and should be committed.
 
 ### Lint the project
 
-``` bash
+```bash
 npm run lint
 ```
 
 ### Format all files
 
-``` bash
+```bash
 npm run format
 ```
 
@@ -136,7 +145,7 @@ npm run format
 
 Run unit tests:
 
-``` bash
+```bash
 npm run test
 ```
 
@@ -148,30 +157,31 @@ Unit tests are stored in:
 
 Run all E2E tests:
 
-``` bash
+```bash
 npm run test:e2e
 ```
+
 or
 
-``` bash
+```bash
 npx playwright test
 ```
 
 Run a single test:
 
-``` bash
+```bash
 npx playwright test tests/login.spec.js
 ```
 
 Show the test report:
 
-``` bash
+```bash
 npx playwright show-report
 ```
 
 ## 📜 Development Scripts
 
-``` json
+```json
 "scripts": {
   "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
   "lint": "eslint .",

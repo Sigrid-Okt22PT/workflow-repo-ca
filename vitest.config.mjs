@@ -6,8 +6,8 @@ export default defineConfig({
     environment: "jsdom",
     include: ["js/test/**/*.test.js"],
     exclude: [
-      "tests/**",       // ignore Playwright tests
-      "node_modules/**"
+      "tests/**", // ignore Playwright tests
+      "node_modules/**",
     ],
   },
 });
