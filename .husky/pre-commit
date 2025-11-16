@@ -1,0 +1,2 @@
+echo ">>> Husky pre-commit hook is running!"
+cmd.exe /c "npx lint-staged"
