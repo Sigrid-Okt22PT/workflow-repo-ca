@@ -125,7 +125,7 @@ E2E_USER_EMAIL=user@example.com
 E2E_USER_PASSWORD=ExamplePassword123
 ```
 
-The `.env.example` contains empty placeholders and should be committed.
+Use `.env.example` and add host, email and password, If the login details do not work, you can create a new user by running the project and using the register form.
 
 ## 🎛 ESLint & Prettier Setup
 
@@ -156,6 +156,7 @@ Unit tests are stored in:
 ## 🧭 Playwright End-to-End Tests
 
 Run all E2E tests:
+Be sure to add .env file before testing
 
 ```bash
 npm run test:e2e
